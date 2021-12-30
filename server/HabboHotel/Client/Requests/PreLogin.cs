@@ -24,8 +24,8 @@ namespace Ion.HabboHotel.Client
         /// </summary>
         private void CHK_VERSION()
         {
-            // Static for now! :D
-            string sPublicKey = "55wfe030o2b17933arq9512j5u111105ckp230c81rp3m61ew9er3y0d523"; //HabboHexRC4.GeneratePublicKeyString();
+            // No longer static! :D
+            string sPublicKey = HabboHexRC4.GeneratePublicKeyString(); //"55wfe030o2b17933arq9512j5u111105ckp230c81rp3m61ew9er3y0d523";
             mSession.GetConnection().SetEncryption(sPublicKey);
 
             Response.Initialize(1); // "@A"
